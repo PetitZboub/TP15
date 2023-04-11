@@ -1,7 +1,7 @@
 <?
 session_start();
 include "verification.php";
-
+include "header.php";
 ?>
 
 <div id="wrapper">
@@ -23,9 +23,4 @@ include "verification.php";
 		<a href="quete001.php">Accepter la quête</a>
 	</main>
 </div>
-<footer>
-	<p>&copy; 2023 Jeu de rôle médiéval - Tous droits réservés.</p>
-</footer>
-</body>
-
-</html>
+<?php include "footer.php"; ?>
