@@ -1,0 +1,200 @@
+body {
+	font-family: 'DotGothic16', sans-serif;
+}
+
+.container {
+	margin: 50px auto;
+	width: 80%;
+	max-width: 600px;
+	padding: 20px;
+	border: 2px solid #8B4513;
+	background-color: #F0E68C;
+	border-radius: 5px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 52px;
+	color: #8B4513;
+	margin-bottom: 20px;
+	font-family: 'Amatic SC', cursive;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+	font-size: 24px;
+	color: #8B4513;
+}
+
+input[type="text"],
+select,
+input[type="number"] {
+	margin-top: 5px;
+	padding: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid #8B4513;
+	font-size: 18px;
+}
+
+input[type="submit"] {
+	margin-top: 10px;
+	padding: 10px 30px;
+	background-color: #8B4513;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 24px;
+}
+
+input[type="submit"]:hover {
+	background-color: #F0E68C;
+	color: #8B4513;
+}
+
+
+
+/* Reset des marges et des paddings */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Style de base des liens */
+a {
+	color: #8B4513;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #666;
+}
+
+/* Header */
+header {
+	background-color: #F0E68C;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 72px;
+}
+
+/* Menu horizontal */
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	font-family: 'Amatic SC', cursive;
+	font-size: 36px;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px;
+}
+
+nav ul li a:hover {
+	background-color: #F0E68C;
+	color: #fff;
+}
+
+/* Barre latérale */
+aside {
+	background-color: #F0E68C;
+	padding: 20px;
+	flex-basis: 20%;
+}
+
+aside h2 {
+	margin-top: 0;
+}
+
+aside ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+aside ul li {
+	margin-bottom: 10px;
+}
+
+aside ul li a:hover {
+	color: #666;
+}
+
+/* Contenu principal */
+main {
+	background-color: #fff;
+	padding: 20px;
+	flex-basis: 80%;
+}
+
+main h2 {
+	margin-top: 0;
+	font-size: 24px;
+}
+
+main p {
+	margin-top: 0;
+	line-height: 1.5;
+}
+
+main a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #F0E68C;
+	color: #8B4513;
+	text-align: center;
+	border-radius: 5px;
+}
+
+main a:hover {
+	background-color: #F0E68C;
+	color: #666;
+}
+
+.surbrillance {
+	color: #8B4513;
+	font-weight: bold;
+}
+
+/* Footer */
+footer {
+	background-color: #F0E68C;
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
+
+#quete1 label {
+	display: inline-block;
+}
+
+table,
+tr,
+th,
+td {
+	border: 2px solid #8B4513;
+	padding: 15px;
+	border-collapse: collapse;
+}
+
+tr:hover {
+	background: #8B4513;
+	color: #fff;
+}
