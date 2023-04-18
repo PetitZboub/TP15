@@ -29,7 +29,7 @@ label {
 
 input[type="text"],
 select,
-input[type="number"] {
+input[type="range"] {
 	margin-top: 5px;
 	padding: 5px;
 	width: 100%;

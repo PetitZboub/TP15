@@ -44,23 +44,23 @@ if (isset($_GET["erreur"])) {
 				<option value="clerc">Clerc</option>
 			</select><br>
 			<label for="niveau">Niveau :</label>
-			<input type="number" id="niveau" name="niveau" min="1" max="20" value="1" required><br>
+			<input type="range" id="niveau" name="niveau" min="1" max="20" value="1" required><br>
 			<label for="pv">Points de vie :</label>
-			<input type="number" id="pv" name="pv" min="1" value="10" required><br>
+			<input type="range" id="pv" name="pv" min="1" value="10" required><br>
 			<hr />
 			<label>Attributs :</label><br>
 			<label for="force_">Force :</label>
-			<input type="number" id="force_" name="force_" min="1" max="20" value="10" required><br>
+			<input type="range" id="force_" name="force_" min="1" max="20" value="10" required><br>
 			<label for="dexterite">Dextérité :</label>
-			<input type="number" id="dexterite" name="dexterite" min="1" max="20" value="10" required><br>
+			<input type="range" id="dexterite" name="dexterite" min="1" max="20" value="10" required><br>
 			<label for="constitution">Constitution :</label>
-			<input type="number" id="constitution" name="constitution" min="1" max="20" value="10" required><br>
+			<input type="range" id="constitution" name="constitution" min="1" max="20" value="10" required><br>
 			<label for="intelligence">Intelligence :</label>
-			<input type="number" id="intelligence" name="intelligence" min="1" max="20" value="10" required><br>
+			<input type="range" id="intelligence" name="intelligence" min="1" max="20" value="10" required><br>
 			<label for="sagesse">Sagesse :</label>
-			<input type="number" id="sagesse" name="sagesse" min="1" max="20" value="10" required><br>
+			<input type="range" id="sagesse" name="sagesse" min="1" max="20" value="10" required><br>
 			<label for="charisme">Charisme :</label>
-			<input type="number" id="charisme" name="charisme" min="1" max="20" value="10" required><br>
+			<input type="range" id="charisme" name="charisme" min="1" max="20" value="10" required><br>
 			<input type="submit" value="Créer" />
 		</form>
 	</div>

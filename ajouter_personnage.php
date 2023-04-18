@@ -1,16 +1,9 @@
 <?
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "jeu_de_role";
-
-try {
-    $pdo = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $error) {
-    echo $error;
-}
+//On inclut le fichier de connexion à la BDD
+include "bdd.php";
+//On appelle la fonction de connexion à la BDD et on stocke notre objet PDO dans unevariable
+$connexion = connexion();
 
 if (isset($_POST['nom'])) {
     // récupération des données du formulaire
@@ -26,24 +19,20 @@ if (isset($_POST['nom'])) {
     $sagesse = $_POST['sagesse'];
     $charisme = $_POST['charisme'];
 
-    // préparation de la requête SQL
-    $stmt = $pdo->prepare("INSERT INTO personnage (nom, race, classe, niveau, pv, force_, dexterite, constitution, intelligence, sagesse, charisme)
-    VALUES (:nom, :race, :classe, :niveau, :pv, :force_, :dexterite, :constitution, :intelligence, :sagesse, :charisme)");
-
-    // exécution de la requête SQL avec les données du formulaire
-    $return = $stmt->execute([
-        ':nom' => $nom,
-        ':race' => $race,
-        ':classe' => $classe,
-        ':niveau' => $niveau,
-        ':pv' => $pv,
-        ':force_' => $force_,
-        ':dexterite' => $dexterite,
-        ':constitution' => $constitution,
-        ':intelligence' => $intelligence,
-        ':sagesse' => $sagesse,
-        ':charisme' => $charisme
-    ]);
+    ajouterPersonnage(
+        $connexion,
+        $nom,
+        $race,
+        $classe,
+        $niveau,
+        $pv,
+        $force_,
+        $dexterite,
+        $constitution,
+        $intelligence,
+        $sagesse,
+        $charisme
+        );
 
     $_SESSION["nom"] = $nom;
     $_SESSION["race"] = $race;
