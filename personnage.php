@@ -1,22 +1,11 @@
 <?
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "jeu_de_role";
+//On inclut le fichier de connexion à la BDD
+include "bdd.php";
+//On appelle la fonction de connexion à la BDD et on stocke notre objet PDO dans unevariable
+$connexion = connexion();
 
-try {
-	$pdo = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname, $username, $password);
-	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $error) {
-	echo $error;
-}
-
-// exécution de la requête SQL avec les données du formulaire
-$stmt = $pdo->prepare("select * from  personnage order by nom");
-if ($stmt->execute()) {
-	$perso = $stmt->fetchAll();
-}
+listePerso($connexion);
 
 include "header.php";
 ?>
