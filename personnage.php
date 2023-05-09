@@ -1,13 +1,14 @@
 <?
 session_start();
+include "verification.php";
 //On inclut le fichier de connexion à la BDD
 include "bdd.php";
 //On appelle la fonction de connexion à la BDD et on stocke notre objet PDO dans unevariable
 $connexion = connexion();
-
-listePerso($connexion);
+$perso = listePerso($connexion);
 
 include "header.php";
+
 ?>
 
 <div id="wrapper">
@@ -24,8 +25,8 @@ include "header.php";
 				</tr>
 			</thead>
 			<tbody>
-				<? foreach ($perso as $p) { ?>
-					<? if ($p["nom"] == $_SESSION["nom"]) {
+				<? foreach ($perso as $p) { 
+					if ($p["nom"] == $_SESSION["nom"]) {
 						$class = "surbrillance";
 					} else {
 						$class = "";

@@ -71,6 +71,7 @@ function listePerso($pdo)
     $stmt = $pdo->prepare("select * from  personnage order by nom");
     if ($stmt->execute()) {
         $perso = $stmt->fetchAll();
+        return $perso;
     }
 }
 ?>

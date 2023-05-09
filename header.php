@@ -1,8 +1,27 @@
+<?
+$pagename = $_SERVER['PHP_SELF'];
+echo $pagename;
+switch ($pagename) {
+	case "/jeuderole/jeu.php":
+		$title = 'Debut de jeu';
+		break;
+	case "/jeuderole/quete001.php":
+		$title = 'Quete Epique';
+		break;
+	case "perdu";
+		$title = "Perdu";
+		break;
+	default:
+		$title='jdr';
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Félicitations !</title>
+	<title><?$title?></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
