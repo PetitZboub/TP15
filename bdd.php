@@ -1,10 +1,18 @@
 <?
 function connexion()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "jeu_de_role";
+    $servername = $_SERVER['SERVER_NAME'];
+    if ($servername == "localhost") {
+        $username = "root";
+        $password = "";
+        $dbname = "jeu_de_role";
+    } else {
+        $username = "id20628559_root";
+        $password = "t4\<Le8D5H7)&a<j";
+        $dbname = "id20628559_rouchjdr";
+    }
+
+
     try {
         $pdo = new PDO(
             'mysql:host=' . $servername . ';dbname=' . $dbname,
