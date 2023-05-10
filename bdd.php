@@ -2,6 +2,7 @@
 function connexion()
 {
     $servername = $_SERVER['SERVER_NAME'];
+    echo $_SERVER['SERVER_NAME'];
     if ($servername == "localhost") {
         $username = "root";
         $password = "";
